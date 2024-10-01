@@ -1,22 +1,17 @@
+import SeasonCard from "@/components/seasonCard";
 import getSeriesData from "@/lib/getSeriesData";
 import { seasons } from "@/types";
-import Image from "next/image";
 
 const Page = async () => {
   const data: seasons = await getSeriesData();
   return (
-    <div>
-      {data.seasons.map((season) => (
-        <div key={season.id}>
-          <Image
-            src={`https://image.tmdb.org/t/p/w500${season.poster_path}`}
-            alt={`${season.name} the office poster.`}
-            width={500}
-            height={500}
-          />
-          <p>{season.name}</p>
-        </div>
-      ))}
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Temporadas de The Office</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+        {data.seasons.slice(1).map((season) => (
+          <SeasonCard key={season.season_number} season={season} />
+        ))}
+      </div>
     </div>
   );
 };
