@@ -7,17 +7,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { season } from "@/types";
+import { Season } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { Progress } from "./ui/progress";
 
 interface Props {
-  season: season;
+  season: Season;
 }
 
 const SeasonCard = ({ season }: Props) => {
-  console.log(season);
   return (
     <Card className="w-[300px] overflow-hidden">
       <div className="relative h-[200px]">

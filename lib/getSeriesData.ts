@@ -5,7 +5,8 @@ const getSeriesData = async () => {
   });
   const response = await fetch(`${process.env.API_URL!}?${searchParams}`);
 
-  return response.json();
+  const data = response.json();
+  return data;
 };
 
 export default getSeriesData;
