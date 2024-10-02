@@ -9,7 +9,7 @@ const Page = async () => {
       <h1 className="text-3xl font-bold pt-4 pb-8 text-center">
         Temporadas de The Office
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
+      <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:items-stretch">
         {data.seasons.slice(1).map((season) => (
           <SeasonCard key={season.season_number} season={season} />
         ))}

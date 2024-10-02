@@ -18,7 +18,7 @@ interface Props {
 
 const SeasonCard = ({ season }: Props) => {
   return (
-    <Card className="w-[300px] overflow-hidden">
+    <Card className="w-full overflow-hidden">
       <div className="relative h-[200px]">
         <Image
           src={`https://image.tmdb.org/t/p/w500${season.poster_path}`}

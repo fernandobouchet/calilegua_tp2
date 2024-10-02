@@ -16,7 +16,7 @@ interface Props {
 
 const EpisodeCard = ({ episode }: Props) => {
   return (
-    <Card className="w-full overflow-hidden flex flex-col sm:flex-row h-auto">
+    <Card className="w-full overflow-hidden flex flex-col h-auto">
       <div className="relative min-h-52 sm:min-w-80 lg:min-w-96">
         <Image
           src={`https://image.tmdb.org/t/p/w500${episode.still_path}`}
