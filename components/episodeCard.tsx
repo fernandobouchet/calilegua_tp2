@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Episode } from "@/types";
 import Image from "next/image";
-import { Progress } from "./ui/progress";
+import VoteAverageBar from "./voteAverageBar";
 
 interface Props {
   episode: Episode;
@@ -38,13 +38,7 @@ const EpisodeCard = ({ episode }: Props) => {
         <CardContent>
           <div className="flex justify-between"></div>
           <span className="text-sm text-gray-400">Valoración:</span>
-          <div className="flex items-center gap-2">
-            <Progress
-              className="[&>*]:!bg-green-600 h-3"
-              value={episode.vote_average * 10}
-            />
-            <span className="text-sm">{episode.vote_average * 10}%</span>
-          </div>
+          <VoteAverageBar voteAverage={episode.vote_average} />
         </CardContent>
         <CardFooter>
           <p>{episode.overview}</p>

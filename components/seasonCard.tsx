@@ -10,7 +10,7 @@ import {
 import { Season } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { Progress } from "./ui/progress";
+import VoteAverageBar from "./voteAverageBar";
 
 interface Props {
   season: Season;
@@ -41,13 +41,7 @@ const SeasonCard = ({ season }: Props) => {
           <span>{season.episode_count} episodios</span>
         </div>
         <span className="text-sm text-gray-500">Valoración:</span>
-        <div className="flex items-center gap-2">
-          <Progress
-            className="[&>*]:!bg-green-600 h-3"
-            value={season.vote_average * 10}
-          />
-          <span className="text-sm">{season.vote_average * 10}%</span>
-        </div>
+        <VoteAverageBar voteAverage={season.vote_average} />
       </CardContent>
       <CardFooter>
         <Link className="w-full" href={`/temporadas/${season.season_number}`}>
