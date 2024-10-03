@@ -1,5 +1,5 @@
-const Page = () => {
-  return <div>Page</div>;
+const Page = async () => {
+  return <section className="main-section">Page</section>;
 };
 
 export default Page;

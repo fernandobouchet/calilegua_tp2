@@ -44,3 +44,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .main-section {
+    @apply container mx-auto px-4 py-8 xl:max-w-4xl mt-10;
+  }
+}

@@ -5,7 +5,7 @@ import { Seasons } from "@/types";
 const Page = async () => {
   const data: Seasons = await getSeriesData();
   return (
-    <section className="container mx-auto px-4 py-8 xl:max-w-screen-xl">
+    <section className="main-section xl:max-w-screen-xl">
       <h1 className="text-3xl font-bold pt-4 pb-8 text-center">
         Temporadas de The Office
       </h1>

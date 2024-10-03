@@ -6,7 +6,7 @@ import Image from "next/image";
 export default async function Home() {
   const data: Series = await getSeriesData();
   return (
-    <section className="container mx-auto px-4 py-8 xl:max-w-4xl">
+    <section className="main-section">
       <h1 className="text-3xl font-bold pt-4 pb-8 text-center">
         The Office Wiki
       </h1>
