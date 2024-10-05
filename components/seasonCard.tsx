@@ -23,6 +23,7 @@ const SeasonCard = ({ season }: Props) => {
         <Image
           src={`https://image.tmdb.org/t/p/w500${season.poster_path}`}
           alt={`${season.name} the office poster.`}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           fill
           className="object-cover"
         />

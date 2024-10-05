@@ -22,6 +22,7 @@ const EpisodeCard = ({ episode }: Props) => {
           src={`https://image.tmdb.org/t/p/w500${episode.still_path}`}
           alt={`${episode.name} the office poster.`}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
         />
         <div className="absolute top-2 left-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded">
