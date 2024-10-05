@@ -1,8 +1,6 @@
 import Link from "next/link";
 import NavItem from "./navItem";
-import { Button } from "./ui/button";
-import { SheetTrigger, SheetContent, Sheet } from "./ui/sheet";
-import { Menu } from "lucide-react";
+import MovileNav from "./mobileNav";
 
 const Navbar = () => {
   return (
@@ -21,21 +19,7 @@ const Navbar = () => {
             <NavItem href="/recomendaciones">Recomendaciones</NavItem>
           </div>
           <div className="md:hidden flex items-center">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" aria-label="Open menu">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[240px] sm:w-[300px]">
-                <nav className="flex flex-col space-y-4 mt-8 font-bold">
-                  <NavItem href="/">Inicio</NavItem>
-                  <NavItem href="/temporadas">Temporadas</NavItem>
-                  <NavItem href="/personajes">Personajes</NavItem>
-                  <NavItem href="/recomendaciones">Recomendaciones</NavItem>
-                </nav>
-              </SheetContent>
-            </Sheet>
+            <MovileNav />
           </div>
         </div>
       </div>
