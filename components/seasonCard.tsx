@@ -8,9 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Season } from "@/types";
-import Image from "next/image";
 import Link from "next/link";
 import VoteAverageBar from "./voteAverageBar";
+import ImageCardLoader from "./imageCardLoader";
 
 interface Props {
   season: Season;
@@ -19,13 +19,10 @@ interface Props {
 const SeasonCard = ({ season }: Props) => {
   return (
     <Card className="w-full overflow-hidden">
-      <div className="relative h-[200px]">
-        <Image
-          src={`https://image.tmdb.org/t/p/w500${season.poster_path}`}
-          alt={`${season.name} the office poster.`}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          fill
-          className="object-cover"
+      <div className="relative min-h-52 sm:min-w-80 lg:max-w-[400px]">
+        <ImageCardLoader
+          imageUrl={`https://image.tmdb.org/t/p/w400${season.poster_path}`}
+          imageAlt={`${season.name} the office poster.`}
         />
         <div className="absolute top-2 left-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded">
           Temporada {season.season_number}

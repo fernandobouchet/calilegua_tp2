@@ -15,7 +15,7 @@ export default async function Home() {
           src={`https://image.tmdb.org/t/p/original/mLyW3UTgi2lsMdtueYODcfAB9Ku.jpg`}
           alt={`${data.name} the office poster.`}
           fill
-          className="mx-auto object-cover"
+          className="mx-auto object-cover rounded-sm"
           priority
         />
       </div>

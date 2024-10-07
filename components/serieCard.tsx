@@ -7,23 +7,20 @@ import {
   CardFooter,
   CardDescription,
 } from "./ui/card";
-import Image from "next/image";
 import VoteAverageBar from "./voteAverageBar";
+import ImageCardLoader from "./imageCardLoader";
 
 interface Props {
   serie: Series;
 }
 
-const SerieCard = async ({ serie }: Props) => {
+const SerieCard = ({ serie }: Props) => {
   return (
     <Card className="w-full overflow-hidden flex flex-col h-auto">
-      <div className="relative min-h-52 sm:min-w-80 lg:min-w-96">
-        <Image
-          src={`https://image.tmdb.org/t/p/w500${serie.backdrop_path}`}
-          alt={`${serie.name} the office poster.`}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
+      <div className="relative min-h-52 sm:min-w-80 lg:max-w-[400px]">
+        <ImageCardLoader
+          imageUrl={`https://image.tmdb.org/t/p/w400${serie.backdrop_path}`}
+          imageAlt={`${serie.name} the office poster.`}
         />
       </div>
       <CardHeader>
