@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NavItem from "./navItem";
 import MovileNav from "./mobileNav";
+import ThemeToggle from "./themeToggle";
 
 const Navbar = () => {
   return (
@@ -18,6 +19,7 @@ const Navbar = () => {
             <NavItem href="/personajes">Personajes</NavItem>
             <NavItem href="/recomendaciones">Recomendaciones</NavItem>
           </div>
+          <ThemeToggle className="hidden md:inline-flex self-center" />
           <div className="md:hidden flex items-center">
             <MovileNav />
           </div>

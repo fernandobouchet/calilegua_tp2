@@ -1,5 +1,6 @@
 "use client";
 import NavItem from "./navItem";
+import ThemeToggle from "./themeToggle";
 import { Button } from "./ui/button";
 import {
   SheetTrigger,
@@ -24,12 +25,12 @@ const MobileNav = () => {
           <Menu className="h-6 w-6" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[240px] sm:w-[300px]">
+      <SheetContent side="right" className="w-[240px] sm:w-[300px] h-full flex">
         <SheetHeader>
           <SheetTitle hidden>Menú</SheetTitle>
           <SheetDescription hidden />
         </SheetHeader>
-        <nav className="flex flex-col space-y-4 mt-8 font-bold">
+        <nav className="flex flex-col h-max space-y-4 mt-8 font-bold">
           <NavItem href="/" onClick={toggleMenu}>
             Inicio
           </NavItem>
@@ -43,6 +44,7 @@ const MobileNav = () => {
             Recomendaciones
           </NavItem>
         </nav>
+        <ThemeToggle className="mt-auto ml-auto" />
       </SheetContent>
     </Sheet>
   );
