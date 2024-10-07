@@ -13,7 +13,7 @@ const CastCard = ({ cast }: Props) => {
       href={`https://www.themoviedb.org/person/${cast.id}?language=es-ES`}
       target="_blank"
     >
-      <Card className="overflow-hidden w-40 lg:w-auto">
+      <Card className="overflow-hidden w-40 lg:w-auto h-full">
         <CardContent className="p-0">
           <div className="relative rounded-full min-h-[240px] lg:min-h-[300px]">
             <ImageCastCardLoader
