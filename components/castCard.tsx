@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { Cast } from "@/types";
+import ImageCastCardLoader from "./imageCastCardLoader";
 
 interface Props {
   cast: Cast;
@@ -10,13 +10,10 @@ const CastCard = ({ cast }: Props) => {
   return (
     <Card className="overflow-hidden w-40 lg:w-auto">
       <CardContent className="p-0">
-        <div className="relative aspect-square rounded-full">
-          <Image
-            src={`https://image.tmdb.org/t/p/w200${cast.profile_path}`}
-            alt={cast.name}
-            width={200}
-            height={200}
-            className="fill cover"
+        <div className="relative rounded-full min-h-[240px] lg:min-h-[300px]">
+          <ImageCastCardLoader
+            imageUrl={`https://image.tmdb.org/t/p/w200${cast.profile_path}`}
+            imageAlt={cast.name}
           />
         </div>
       </CardContent>
