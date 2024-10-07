@@ -8,7 +8,7 @@ interface Props {
 
 const CastCard = ({ cast }: Props) => {
   return (
-    <Card className="overflow-hidden w-40">
+    <Card className="overflow-hidden w-40 lg:w-auto">
       <CardContent className="p-0">
         <div className="relative aspect-square rounded-full">
           <Image
