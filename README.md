@@ -1,6 +1,6 @@
 # The Office Wiki
 
-This web application, developed with [Next.js](https://nextjs.org/), [Typescript](https://www.typescriptlang.org/), and styled using [Tailwind CSS](https://tailwindcss.com/), serves as a comprehensive Wiki for the TV show **The Office**. This project is part of a **Next.js course** that aims to enhance skills in building modern web applications. The application allows users to explore episodes, seasons, and cast members, as well as recommendations for similar series, all powered by the [TMDB API](https://www.themoviedb.org/documentation/api).
+This web application, developed with [Next.js](https://nextjs.org/), [Typescript](https://www.typescriptlang.org/), and styled using [Tailwind CSS](https://tailwindcss.com/), serves as a comprehensive Wiki for the TV show **The Office**. This project is part of a **Next.js course** that aims to enhance skills in building modern web applications. The application allows users to explore episodes, seasons, and cast members, as well as recommendations for similar series, all powered by the [TMDB API](https://www.themoviedb.org/documentation/api). **Web content its in spanish only**
 
 
 ## Key Features
